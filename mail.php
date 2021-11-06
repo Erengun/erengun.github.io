@@ -15,8 +15,8 @@ use PHPMailer\PHPMailer\Exception;
             $mail ->SMTPAuth = "true";
             $mail ->SMTPSecure = "tsl";
             $mail ->Port = "587";
-            $mail ->Username = "osmannes53@gmail.com";
-            $mail ->Password = "7asd91asdas358asdasd462asda5asdasdasd";
+            $mail ->Username = "osmannes153@gmail.com";
+            $mail ->Password = "7as123d92131asdas351238asdasd462asda5asdasdasd";
             //gönderen
             $mail ->Subject = "".$_POST['subject']."";
             $mail ->setFrom("osmannes53@gmail.com");
