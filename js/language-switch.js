@@ -1,9 +1,9 @@
 $(".eng").show();
 $(".tr").hide();
-$(".tr1").hide();
-$(".eng1").show();
-$(".tr-img").hide();
-$(".eng-img").show();
+$(".tr1").show();
+$(".eng1").hide();
+$(".tr-img").show();
+$(".eng-img").hide();
 $(".eng1").click(function(){
     $(".eng").show();
     $(".tr").hide();
