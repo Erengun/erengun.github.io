@@ -12,7 +12,11 @@ body {
   align-items: center;
   font-family: "Poppins", sans-serif;
 }
-
+.Ecole
+{
+  text-decoration: underline;
+  color : white;
+}
 #loading {
   width: 100vw;
   height: 100vh;
