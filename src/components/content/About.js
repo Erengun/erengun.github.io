@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Container, Typography, Box, Grid, List, ListItem, ListItemText } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import { Container, Typography, Box, Grid, List, ListItem, ListItemText, Card, CardContent, Paper, TextField, Chip } from '@material-ui/core';
 import Resume from '../../settings/resume.json';
 
 const useStyles = makeStyles((theme) => ({
@@ -19,29 +19,36 @@ const useStyles = makeStyles((theme) => ({
 	rightSection: {
 		flex: 1,
 	},
+	chip: {
+		margin: theme.spacing(0.5),
+	},
 }));
 
 export const AboutSection = () => {
 	const classes = useStyles();
-	const [expandedExperience, setExpandedExperience] = useState(null);
+	const [expandedExperience, setExpandedExperience] = useState(0);
 
 	const handleExperienceClick = (index) => {
-	  setExpandedExperience(index === expandedExperience ? null : index);
+	  setExpandedExperience(index);
 	};
 
 	return (
-		<Container component="main" className={classes.container} maxWidth="md" fullWidth>
-			<Typography variant="h2" component="h1" gutterBottom>
-				About
-			</Typography>
-			<Typography variant="body1" component="p" gutterBottom>
-				{Resume.basics.description}
-			</Typography>
-			<Typography variant="body1" component="p" gutterBottom>
-				{Resume.basics.summary}
-			</Typography>
+		<Container component="main" className={classes.container} maxWidth="md">
+			<Paper component="section" elevation={3} square>
+				<Box p={4}>
+					<Typography variant="h2" component="h1" gutterBottom>
+						About
+					</Typography>
+					<Typography variant="body1" component="p" gutterBottom>
+						{Resume.basics.description}
+					</Typography>
+					<Typography variant="body1" component="p" gutterBottom>
+						{Resume.basics.summary}
+					</Typography>
+				</Box>
+			</Paper>
 
-			<Box mt={4}>
+			<Box mt={4} mb={4}>
 				<Typography variant="h4" component="h2" gutterBottom>
 					Experience
 				</Typography>
@@ -58,15 +65,32 @@ export const AboutSection = () => {
 					<Grid item xs={12} sm={8}>
 						{Resume.work.map((experience, index) => (
 							<Box key={index} mb={2} style={{ display: expandedExperience === index ? 'block' : 'none' }}>
-								<Typography variant="h6" component="h3" gutterBottom>
-									{experience.position} at {experience.company}
-								</Typography>
-								<Typography variant="body1" component="p" gutterBottom>
-									{experience.startDate} - {experience.endDate || 'Present'}
-								</Typography>
-								<Typography variant="body1" component="p" gutterBottom>
-									{experience.summary}
-								</Typography>
+								<Card>
+									<CardContent>
+										<Typography variant="h6" component="h3" gutterBottom>
+											{experience.position} at {experience.company}
+										</Typography>
+										<Typography variant="body1" component="p" gutterBottom>
+											{experience.startDate} - {experience.endDate || 'Present'}
+										</Typography>
+										<Typography variant="body1" component="p" gutterBottom>
+											{experience.summary}
+										</Typography>
+										<TextField
+											fullWidth
+											multiline
+											variant="outlined"
+											label="Highlights"
+											value={experience.highlights}
+											InputProps={{ readOnly: true }}
+										/>
+										<Box mt={2}>
+											{experience.keywords.map((keyword, idx) => (
+												<Chip key={idx} label={keyword} className={classes.chip} />
+											))}
+										</Box>
+									</CardContent>
+								</Card>
 							</Box>
 						))}
 					</Grid>
