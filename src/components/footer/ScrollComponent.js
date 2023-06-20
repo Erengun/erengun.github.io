@@ -46,11 +46,11 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const ScrollIndicator = () => {
+export const ScrollIndicator = ({ onButtonClick }) => {
 	const classes = useStyles();
 
 	return (
-		<div className={classes.scrolldownWrapper}>
+		<div className={classes.scrolldownWrapper} onClick={onButtonClick}>
 			<div className={classes.scrolldown}>
 				<svg height="20" width="6">
 					<circle className={classes.scrolldownP1} cx="3" cy="10" r="1" />
