@@ -67,7 +67,7 @@
             "startDate": "2023-02-02",
             "endDate": "still working",
             "summary": "Tinywall is a mobile app for making car parking more easy and memorable. It is written in Flutter.",
-            "highlights": "Tinywall is a mobile app for making car parking more easy and memorable. It is written in Flutter. I was responsible for the development of the mobile app. I wrote more than 7 thousand lines of code in Flutter and Dart. The project uses Mobx for state management and GetIt for dependency injection.",
+            "highlights": "I was responsible for the development of the mobile app. I wrote more than 7 thousand lines of code in Flutter and Dart. The project uses Mobx for state management and GetIt for dependency injection.",
             "keywords": [
                 "Native Splash",
                 "Fluro Routing",
@@ -93,7 +93,7 @@
             "startDate": "2022-11-01",
             "endDate": "2023-01-01",
             "summary": "GOHouse is a mobile app for about online house chores services.",
-            "highlights": "GOHouse is a mobile app for about online house chores services. I was responsible for the development of the entire mobile app. I wrote more than 5 thousand lines of code in Flutter and Dart. The project uses Mobx for state management and GetIt for dependency injection.",
+            "highlights": "I was responsible for the development of the entire mobile app. I wrote more than 5 thousand lines of code in Flutter and Dart. The project uses Mobx for state management and GetIt for dependency injection.",
             "keywords": [
                 "Native Splash",
                 "Fluro Routing",
@@ -114,7 +114,7 @@
             "startDate": "2022-05-01",
             "endDate": "2022-07-01",
             "summary": "Sende.tech is a startup for making shipping completely automated using UAV technologies.",
-            "highlights": "Sende.tech is a startup for making shipping completely automated using UAV technologies. I was responsible for the development of the entire web app.",
+            "highlights": "I was responsible for the development of the entire web app.",
             "keywords": [
                 "UAV",
                 "Tubitak BIGG",
