@@ -19,7 +19,14 @@ jobs:
         node-version: 14
 
     - name: Install dependencies
-      run: npm install # Change this line from 'npm ci' to 'npm install'
+      run: npm install
 
     - name: Build React app
       run: npm run build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GH_PAGES_PAT }} 
+        publish_dir: ./build
+        branch: gh-pages # Add this line to specify the branch
