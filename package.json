@@ -27,12 +27,6 @@
         "three": "^0.125.0",
         "use-dencrypt-effect": "1.0.1"
     },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build && react-snapshot",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
-    },
     "reactSnapshot": {
         "exclude": [
             "/resume"
