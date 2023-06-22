@@ -1,7 +1,7 @@
 {
     "name": "personal-website-react",
     "version": "0.2.0",
-    "homepage": "https://erengun.github.io",
+    "homepage": ".",
     "description": "This is a clean customizable portfolio template for developers.",
     "repository": "https://github.com/Erengun/erengun.github.io",
     "author": "Eren Gün <hi@erengun.dev>",
