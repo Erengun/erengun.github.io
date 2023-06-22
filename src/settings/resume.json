@@ -4,12 +4,12 @@
         "label": "Full-Stack Application Developer",
         "email": "hi@erengun.dev",
         "phone": "(543) 170-4942",
-        "picture": "jl.png",
+        "picture": "https://drive.google.com/file/d/1DyY6g57puBk1rPVcI1yzkXv52uinbwMH/view?usp=sharing",
         "x_title": "Hey, I'm",
         "job": "Full-Stack Application Developer",
         "description": "Hi, I'm Eren, a developer studying at Ecole 42. I'm a quick learner, passionate about science, technology, and various development languages. Currently, I'm focusing on Flutter, a cost-effective and efficient alternative for mobile app development. With almost a year of experience in Flutter and a few months in Node.js",
         "summary": "based in Istanbul, Turkiye",
-        "keywords": "personal,website,portfolio,jolienhoop,computer,science,react,github,linkedin,google,gitlab,telegram,material,design,ui,webapp,Eren,GÜN,Eren,GUN,Flutter,developer,Dart,programming,Mobile,app,development,Web,development,Ecole,42,Node.js,Cross-platform,development,Flutter,mobile,apps,Dart,web,apps,Flutter,UI,framework,JavascriptCore,QuickJS,Flutter,SDK,Dart,packages,Flutter,eren,gun",
+        "keywords": "personal,website,portfolio,computer,science,react,github,linkedin,google,gitlab,telegram,material,design,ui,webapp,Eren,GÜN,Eren,GUN,Flutter,developer,Dart,programming,Mobile,app,development,Web,development,Ecole,42,Node.js,Cross-platform,development,Flutter,mobile,apps,Dart,web,apps,Flutter,UI,framework,JavascriptCore,QuickJS,Flutter,SDK,Dart,packages,Flutter,eren,gun",
         "url": "https://erengun.dev",
         "location": {
             "address": "XX XXXXXstreet",
@@ -141,85 +141,200 @@
     ],
     "volunteer": [
         {
+            "organization": "GDG Istanbul - Devfest'22",
+            "position": "Member",
+            "website": "http://gdgistanbul-slack.herokuapp.com",
+            "startDate": "2022-09-01",
+            "endDate": "Now",
+            "summary": "GDG Istanbul is a community brings the people together who are interested in Google technologies, want to develop and share knowledge. The main topics are Android, Polymer, Angular, Google APIs.",
+            "highlights": [
+                "I am one of the organizers of DevFest'22. "
+            ]
+        },
+        {
             "organization": "Vorfex42 - Software development community",
             "position": "Creator",
             "website": "-",
             "startDate": "2020-01-01",
             "endDate": "2024-01-01",
-            "summary": "Description...",
+            "summary": "As the founder of this organization, I am proud to announce that we are the community sponsor of Devfest'22. Our main focus is on programming languages such as C, Python, Android, Flutter, and iOS",
             "highlights": [
-                "Awarded 'Volunteer of the Month'"
+                "As a member and founder of Vorfex42, I played a key role in developing Python and contributed significantly to our second-place win at Teknofest. "
             ]
+        },
+        {
+            "organization": "Rising Star Scholarship Program",
+            "position": "Scholarship",
+            "website": "-",
+            "startDate": "2022-02-01",
+            "endDate": "2023-03-01",
+            "summary": "The Rising Star Scholarship is a ten-month long scholarship program provided by the T3 Foundation to 100 university students that have the potential to become technology leaders.",
+            "highlights": []
         }
     ],
     "education": [
         {
-            "institution": "University",
-            "area": "Software Development",
+            "institution": "Ecole 42",
+            "area": "Computer Science",
             "studyType": "Bachelor",
-            "startDate": "2011-01-01",
-            "endDate": "2013-01-01",
+            "startDate": "2021-01-01",
+            "endDate": "2025-01-01",
             "gpa": "4.0",
             "courses": [
-                "DB1101 - Basic SQL"
+                "C",
+                "C++"
+            ]
+        },
+        {
+            "institution": "Istanbul University",
+            "area": "Computer Programming",
+            "studyType": "Associate",
+            "startDate": "2022-01-01",
+            "endDate": "2024-01-01",
+            "gpa": "3.0",
+            "courses": []
+        },
+        {
+            "institution": "Istanbul Arel University",
+            "area": "Computer Aided Design and Animation",
+            "studyType": "Associate",
+            "startDate": "2019-01-01",
+            "endDate": "2021-01-01",
+            "gpa": "3.5",
+            "courses": [
+                "Photoshop",
+                "Illustrator",
+                "After Effects",
+                "Premiere Pro",
+                "3ds Max",
+                "Autocad",
+                "Maya",
+                "Figma"
             ]
         }
     ],
     "awards": [
         {
-            "title": "Award",
-            "date": "2014-11-01",
-            "awarder": "Company",
-            "summary": "There is no spoon."
-        }
-    ],
-    "publications": [
-        {
-            "name": "Publication",
-            "publisher": "Company",
-            "releaseDate": "2014-10-01",
-            "website": "http://publication.com",
-            "summary": "Description..."
+            "title": "Teknofest Swarm Simulation Competition - 2nd Place",
+            "date": "2022-07-01",
+            "awarder": "Teknofest",
+            "summary": "As a member and founder of Vorfex42, I played a key role in developing Python and contributed significantly to our second-place win at Teknofest. Our team, comprised of students and graduates from diverse backgrounds, came together under the Ecole 42 infrastructure. With a focus on software development, we excelled in the Karma Swarm Simulation Competition, optimizing unmanned vehicles for firefighting and disaster relief scenarios. Our dedication and strategic approach led to our recognition as second-place winners at Teknofest. "
         }
     ],
     "skills": [
         {
-            "name": "Web Development",
+            "name": "Flutter",
             "level": "Master",
             "keywords": [
-                "HTML",
-                "CSS",
-                "Javascript"
+                "Dart",
+                "MobX",
+                "Provider",
+                "Fluro",
+                "Firebase",
+                "User Notifications",
+                "Logging",
+                "Dependency Injection",
+                "Native Splash",
+                "Theme",
+                "Dio",
+                "Flutter",
+                "Flutter Web",
+                "Flutter Desktop"
             ]
-        }
-    ],
-    "languages": [
-        {
-            "language": "German",
-            "fluency": "Native speaker"
         },
         {
-            "language": "English",
-            "fluency": "Fluent speaker"
+            "name": "Dart",
+            "level": "Master",
+            "keywords": [
+                "Null Safety"
+            ]
         },
         {
-            "language": "French",
-            "fluency": "Good knowledge"
+            "name": "Node.js",
+            "level": "Intermediate",
+            "keywords": [
+                "Express",
+                "Socket.io",
+                "MongoDB",
+                "REST API"
+            ]
+        },
+        {
+            "name": "Firebase",
+            "level": "Intermediate",
+            "keywords": [
+                "Authentication",
+                "Firestore",
+                "Storage",
+                "Cloud Functions",
+                "Cloud Messaging",
+                "Remote Config",
+                "Performance Monitoring",
+                "Analytics",
+                "Dynamic Links"
+            ]
+        },
+        {
+            "name": "C",
+            "level": "Master",
+            "keywords": [
+                "Minilibx",
+                "Multithreading",
+                "Networking",
+                "Algorithms",
+                "Data Structures",
+                "Makefile",
+                "GNU",
+                "Valgrind",
+                "GDB",
+                "Norminette"
+            ]
+        },
+        {
+            "name": "C++",
+            "level": "Middle",
+            "keywords": [
+                "Inheritance",
+                "Polymorphism",
+                "Templates",
+                "Object Oriented Programming",
+                "Algorithms",
+                "Data Structures",
+                "Exceptions"
+            ]
+        },
+        {
+            "name": "Python",
+            "level": "Middle",
+            "keywords": [
+                "Tkinter",
+                "Algorithms",
+                "Data Structures",
+                "Multithreading",
+                "Networking",
+                "OpenCV",
+                "Numpy",
+                "Pandas",
+                "Matplotlib",
+                "Tensorflow",
+                "Django",
+                "REST API",
+                "Selenium",
+                "BeautifulSoup",
+                "Scrapy",
+                "Pip"
+            ]
         }
     ],
     "interests": [
         {
-            "name": "Wildlife",
+            "name": "Diecast Car Collection",
             "keywords": [
-                "Ferrets",
-                "Unicorns"
+                "Hot Wheels",
+                "Matchbox",
+                "Welly",
+                "Maisto"
             ]
-        }
-    ],
-    "references": [
-        {
-            "name": "Jane Doe",
-            "reference": "Reference..."
         }
     ]
 }

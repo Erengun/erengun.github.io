@@ -1,5 +1,88 @@
 import React from 'react';
 import ResumeData from '../settings/resume.json';
+import { makeStyles } from '@material-ui/core/styles';
+import { Typography, Box, ListItem, ListItemText, List, Divider, AppBar, Toolbar } from '@material-ui/core';
+import { ThemeToggle } from '../components/theme/ThemeToggle';
+import { SocialIcons } from '../components/content/SocialIcons';
+import { Helmet } from 'react-helmet';
+import { FirstName } from '../utils/getName';
+import { LogoLink } from '../components/logo/LogoLink';
+
+
+const useStyles = makeStyles((theme) => ({
+  appBar: {
+    zIndex: theme.zIndex.drawer + 1,
+  },
+  toolbar: {
+    justifyContent: 'space-between',
+  },
+  root: {
+    maxWidth: '800px',
+    margin: '0 auto',
+    padding: theme.spacing(2),
+    paddingTop: theme.spacing(12),
+  },
+  sectionTitle: {
+    marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(1),
+    fontWeight: 'bold',
+  },
+  listItem: {
+    marginBottom: theme.spacing(1),
+  },
+  divider: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(3),
+  },
+}));
+
+function Section({ title, children }) {
+  const classes = useStyles();
+
+  return (
+    <Box mt={4} mb={4}>
+      <Typography variant="h5" component="h2" className={classes.sectionTitle}>
+        {title}
+      </Typography>
+      {children}
+      <Divider className={classes.divider} />
+    </Box>
+  );
+}
+
+function ResumeItem({ title, subtitle, date, description }) {
+  const classes = useStyles();
+
+  return (
+    <ListItem className={classes.listItem} alignItems="flex-start">
+      <ListItemText
+        primary={
+          <>
+            <Typography variant="h6" component="span">
+              {title}
+            </Typography>
+            {' – '}
+            <Typography variant="subtitle1" component="span">
+              {subtitle}
+            </Typography>
+          </>
+        }
+        secondary={
+          <>
+            <Typography variant="body2" component="span" color="textSecondary">
+              {date}
+            </Typography>
+            {description && (
+              <Typography variant="body1" component="p">
+                {description}
+              </Typography>
+            )}
+          </>
+        }
+      />
+    </ListItem>
+  );
+}
 
 export default function Resume() {
   const {
@@ -8,85 +91,120 @@ export default function Resume() {
     volunteer,
     education,
     awards,
-    publications,
     skills,
-    languages,
     interests,
-    references
   } = ResumeData;
+  const classes = useStyles();
 
   return (
-    <div>
-      <h1>{basics.name}</h1>
-      <h2>{basics.label}</h2>
-      <p>Email: {basics.email}</p>
-      <p>Phone: {basics.phone}</p>
-      <h3>Work Experience</h3>
-      {work.map((job, index) => (
-        <div key={index}>
-          <h4>{job.position} at {job.company}</h4>
-          <p>{job.startDate} - {job.endDate}</p>
-          <p>{job.summary}</p>
-        </div>
-      ))}
-      <h3>Volunteer Experience</h3>
-      {volunteer.map((vol, index) => (
-        <div key={index}>
-          <h4>{vol.position} at {vol.organization}</h4>
-          <p>{vol.startDate} - {vol.endDate}</p>
-          <p>{vol.summary}</p>
-        </div>
-      ))}
-      <h3>Education</h3>
-      {education.map((edu, index) => (
-        <div key={index}>
-          <h4>{edu.studyType} in {edu.area} at {edu.institution}</h4>
-          <p>{edu.startDate} - {edu.endDate}</p>
-        </div>
-      ))}
-      <h3>Awards</h3>
-      {awards.map((award, index) => (
-        <div key={index}>
-          <h4>{award.title}</h4>
-          <p>By {award.awarder} on {award.date}</p>
-        </div>
-      ))}
-      <h3>Publications</h3>
-      {publications.map((pub, index) => (
-        <div key={index}>
-          <h4>{pub.name}</h4>
-          <p>Published by {pub.publisher} on {pub.releaseDate}</p>
-        </div>
-      ))}
-      <h3>Skills</h3>
-      {skills.map((skill, index) => (
-        <div key={index}>
-          <h4>{skill.name}</h4>
-          <p>Level: {skill.level}</p>
-          <p>Keywords: {skill.keywords.join(', ')}</p>
-        </div>
-      ))}
-      <h3>Languages</h3>
-      {languages.map((lang, index) => (
-        <div key={index}>
-          <h4>{lang.language}</h4>
-          <p>Fluency: {lang.fluency}</p>
-        </div>
-      ))}
-      <h3>Interests</h3>
-      {interests.map((interest, index) => (
-        <div key={index}>
-          <h4>{interest.name}</h4>
-          <p>Keywords: {interest.keywords.join(', ')}</p>
-        </div>
-      ))}
-      <h3>References</h3>
-      {references.map((ref, index) => (
-        <div key={index}>
-          <h4>{ref.name}</h4>
-          <p>{ref.reference}</p>
-        </div>
-      ))}
+    <>
+    <AppBar position="fixed" color="transparent" elevation={0} className={classes.appBar}>
+        <Toolbar className={classes.toolbar}>
+          <LogoLink />
+          <SocialIcons />
+          <ThemeToggle />
+        </Toolbar>
+      </AppBar>
+    <div className={classes.root}>
+      <Helmet>
+        <title>{`Resume - ${FirstName}`}</title>
+        <meta
+          name="description"
+          content={`Resume for ${FirstName}, ${basics.label}`}
+        />
+      </Helmet>
+      <Typography variant="h3" component="h1" gutterBottom>
+        {basics.name}
+      </Typography>
+      <Typography variant="h5" component="h2" gutterBottom>
+        {basics.label}
+      </Typography>
+      <Typography variant="body1" component="p" gutterBottom>
+        Email: {basics.email}
+      </Typography>
+      <Typography variant="body1" component="p" gutterBottom>
+        Phone: {basics.phone}
+      </Typography>
+
+      <Section title="Work Experience">
+        <List>
+          {work.map((job, index) => (
+            <ResumeItem
+              key={index}
+              title={job.position}
+              subtitle={job.company}
+              date={`${job.startDate} – ${job.endDate}`}
+              description={job.summary}
+            />
+          ))}
+        </List>
+      </Section>
+
+      <Section title="Volunteer Experience">
+        <List>
+          {volunteer.map((vol, index) => (
+            <ResumeItem
+              key={index}
+              title={vol.position}
+              subtitle={vol.organization}
+              date={`${vol.startDate} – ${vol.endDate}`}
+              description={vol.summary}
+            />
+          ))}
+        </List>
+      </Section>
+
+      <Section title="Education">
+        <List>
+          {education.map((edu, index) => (
+            <ResumeItem
+              key={index}
+              title={`${edu.studyType} in ${edu.area}`}
+              subtitle={edu.institution}
+              date={`${edu.startDate} – ${edu.endDate}`}
+            />
+          ))}
+        </List>
+      </Section>
+
+      <Section title="Awards">
+        <List>
+          {awards.map((award, index) => (
+            <ResumeItem
+              key={index}
+              title={award.title}
+              subtitle={award.awarder}
+              date={award.date}
+            />
+          ))}
+        </List>
+      </Section>
+
+      <Section title="Skills">
+        <List>
+          {skills.map((skill, index) => (
+            <ResumeItem
+              key={index}
+              title={skill.name}
+              subtitle={`Level: ${skill.level}`}
+              description={`Keywords: ${skill.keywords.join(', ')}`}
+            />
+          ))}
+        </List>
+      </Section>
+
+      <Section title="Interests">
+        <List>
+          {interests.map((interest, index) => (
+            <ResumeItem
+              key={index}
+              title={interest.name}
+              description={`Keywords: ${interest.keywords.join(', ')}`}
+            />
+          ))}
+        </List>
+      </Section>
     </div>
+    </>
   );
 }

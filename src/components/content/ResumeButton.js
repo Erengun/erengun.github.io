@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import GetAppIcon from '@material-ui/icons/GetApp'; // Import GetApp icon
 
 const useStyles = makeStyles((theme) => ({
   svgHover: {
@@ -19,13 +20,7 @@ export const DownloadResumeIcon = () => {
   const classes = useStyles();
 
   return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      viewBox='0 0 16 16'
-      width='16'
-      height='16'
-      className={classes.svgHover}
-    >
-    </svg>
+    // Use GetAppIcon instead of the SVG element
+    <GetAppIcon className={classes.svgHover} />
   );
 };

@@ -10,25 +10,25 @@ const useStyles = makeStyles((theme) => ({
 		transform: 'translate(-50%, -50%)',
 	},
 	scrolldown: {
-		border: '2px solid #FFFFFF',
+		border: `2px solid ${theme.palette.text.primary}`,
 		borderRadius: '30px',
 		height: '46px',
 		margin: '0 auto 8px',
 		textAlign: 'center',
 		width: '30px',
-	},
+	  },
 	scrolldownP1: {
 		animationDuration: '1.5s',
 		animationName: '$scrolldown',
 		animationIterationCount: 'infinite',
-		fill: '#FFFFFF',
+		fill: theme.palette.text.primary,
 	},
 	scrolldownP2: {
 		animationDuration: '1.5s',
 		animationName: '$scrolldown',
 		animationIterationCount: 'infinite',
 		animationDelay: '0.75s',
-		fill: '#FFFFFF',
+		fill: theme.palette.text.primary,
 	},
 	'@keyframes scrolldown': {
 		'0%': {
@@ -46,17 +46,19 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const ScrollIndicator = ({ onButtonClick }) => {
+export const ScrollIndicator = ({ onClick }) => {
 	const classes = useStyles();
-
+  
 	return (
-		<div className={classes.scrolldownWrapper} onClick={onButtonClick}>
-			<div className={classes.scrolldown}>
-				<svg height="20" width="6">
-					<circle className={classes.scrolldownP1} cx="3" cy="10" r="1" />
-					<circle className={classes.scrolldownP2} cx="3" cy="10" r="1" />
-				</svg>
-			</div>
+	  <div className={classes.scrolldownWrapper} onClick={onClick} style={{ cursor: 'pointer' }}>
+		<div className={classes.scrolldown}>
+		  <svg height="20" width="6">
+			<circle className={classes.scrolldownP1} cx="3" cy="10" r="1" />
+			<circle className={classes.scrolldownP2} cx="3" cy="10" r="1" />
+		  </svg>
 		</div>
+	  </div>
 	);
-}
+  };
+  
+  

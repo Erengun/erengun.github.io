@@ -1,3 +1,3 @@
-Sitemap: https://jolienhoop.com/sitemap.xml
+Sitemap: https://erengun.dev/sitemap.xml
 User-agent: *
 Disallow: /test/

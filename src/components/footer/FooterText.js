@@ -1,8 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Link } from '@material-ui/core';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Typography, Link, Tooltip, useMediaQuery, Zoom } from '@material-ui/core';
 import { TextDecrypt } from '../content/TextDecrypt';
-import { DownloadResumeIcon } from '../content/SponsorButton';
+import { DownloadResumeIcon } from '../content/ResumeButton';
 
 const useStyles = makeStyles((theme) => ({
   footerText: {
@@ -21,20 +21,40 @@ const useStyles = makeStyles((theme) => ({
 
 export const FooterText = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
+
+  const content = (
+    <>
+      {!isMobile && (
+        <Typography variant='body1'>
+          <TextDecrypt text={' Download Resume'} />
+        </Typography>
+      )}
+    </>
+  );
 
   return (
     <Link
       color='inherit'
       underline='none'
-      href='https://github.com/sponsors/JoHoop'
+      href='/path/to/your/resume' // Update this with the actual path to your resume file
       target='_blank'
       rel='noopener noreferrer'
       className={classes.footerText}
+      download
     >
-      <DownloadResumeIcon />
-      <Typography variant='body1'>
-        <TextDecrypt text={' Download Resume'} />
-      </Typography>
+      {isMobile ? (
+        <Tooltip
+          title={"Download Resume"}
+          placement="right"
+          TransitionComponent={Zoom}
+        >
+          <DownloadResumeIcon />
+        </Tooltip>
+      ) : (
+        content
+      )}
     </Link>
   );
 };
