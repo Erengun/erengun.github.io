@@ -21,9 +21,10 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Build React app
+    - name: Build
       run: npm run build
-
+      env:
+        PUBLIC_URL: .
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
