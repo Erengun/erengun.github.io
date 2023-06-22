@@ -1,10 +1,10 @@
 {
     "name": "personal-website-react",
     "version": "0.2.0",
-    "homepage": "https://jolienhoop.com",
+    "homepage": "https://erengun.dev",
     "description": "This is a clean customizable portfolio template for developers.",
     "repository": "https://github.com/JoHoop/personal-website-react",
-    "author": "Jo Lienhoop <hey@jolienhoop.com>",
+    "author": "Eren Gün <hey@erengun.dev>",
     "license": "MIT",
     "dependencies": {
         "@material-ui/core": "^4.11.0",
@@ -53,5 +53,8 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
     }
 }

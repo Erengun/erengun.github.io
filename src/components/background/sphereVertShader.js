@@ -12,6 +12,7 @@
 // https://github.com/ashima/webgl-noise
 //
 
+/* eslint-disable import/no-anonymous-default-export */
 export default `
 vec3 mod289(vec3 x)
 {
