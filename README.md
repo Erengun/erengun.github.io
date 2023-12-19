@@ -8,7 +8,7 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/JoHoop/personal-website-react/graphs/commit-activity)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 
-A clean, responsive, single-page webapp template for developers. View demo at [erengun.dev](https://erengun.dev)
+A clean, responsive, single-page webapp template for developers. View demo at [erengun.dev](https://erengun.dev). All work done by @Jo Lienhoop
 
 -   built using [React](https://reactjs.org/)
 -   bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
